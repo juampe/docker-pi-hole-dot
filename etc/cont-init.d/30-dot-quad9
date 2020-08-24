@@ -1,0 +1,36 @@
+#!/usr/bin/with-contenv bash
+set -e
+
+if [ -n $DOT_UPSTREAM ]
+then
+	case $DOT_UPSTREAM in
+	cloudflare)
+		FORWARDS=1.1.1.1,1.0.0.1
+		;;
+	google)
+	        FORWARDS=8.8.8.8,8.4.4.8
+	        ;;
+	quad9)
+	        FORWARDS=9.9.9.9
+	        ;;
+	cleanbrowsing)
+	        FORWARDS=185.228.168.168,185.228.168.10
+	        ;;
+	*)
+		FORWARDS=$DOT_UPSTREAM
+		;;
+	esac
+else
+	FORWARDS=1.1.1.1,1.0.0.1
+fi
+
+for FORWARD in ${FORWARDS//,/ }
+do
+	echo "     forward-addr: $FORWARD@853" >> /etc/unbound/forward-dot-user.conf
+done
+
+cp /etc/unbound/forward-dot-user.conf /etc/unbound/unbound.conf.d/forward-dot-user.conf
+
+echo "  Running unbound 127.0.0.1#5353 upstream to $FORWARDS"
+
+unbound
