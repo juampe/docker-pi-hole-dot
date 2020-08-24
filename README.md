@@ -13,5 +13,6 @@ The **DOT_UPSTREAM** environment variable can be defined by one or several user 
 * 1.1.1.1,8.8.8.8
 * 8.8.8.8,1.1.1.1,9.9.9.9
 
+To use the unbound DoT and the configured upstream server, you need to go to the section "Pi-hole>Settings>DNS>Upstream DNS Server" and set "Custom 1 (IPv4)" to **127.0.0.1#5353**
 
-Thanks to https://github.com/stafwag and https://github.com/stafwag/docker-stafwag-unbound
+Thanks to  https://github.com/stafwag/docker-stafwag-unbound
