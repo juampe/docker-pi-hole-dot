@@ -9,6 +9,10 @@ The unbound daemon runs in 0.0.0.0#5353 and Pi Hole can use it as upstream DNS.
 
 ## Multi-platform image
 
+Access to the multi-platform docker [image](https://hub.docker.com/r/juampe/pihole-dot)
+
+Access to the git [repository](https://github.com/juampe/docker-pi-hole-dot.git)
+
 * Supported platforms:
   * linux/amd64
   * linux/arm/v7
@@ -28,7 +32,7 @@ The enhancement is the the unbound daemon configured to use DNS over TLS (DoT)
 
 ## DoT unbound upstream configuration
 
-The unbound DoT upstream can be configure by the **DOT_UPSTREAM** environment variable
+The unbound DoT upstream can be configured by the **DOT_UPSTREAM** environment variable
 
 * [cloudflare](https://blog.cloudflare.com/announcing-1111/)
 * [google](https://developers.google.com/speed/public-dns/docs/dns-over-tls)
