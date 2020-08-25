@@ -32,8 +32,15 @@ The unbound DoT upstream can be configure by the **DOT_UPSTREAM** environment va
 
 * cloudflare
 * google
-* cloud9
-* cleanbrowsing
+* cloud9-secure
+* cloud9-insecure
+* adguard
+* adguard-family
+* adguard-nonfiltering
+* cleanbrowsing-security
+* cleanbrowsing-family
+* cleanbrowsing-adult
+* comcast
 
 Additionally the **DOT_UPSTREAM** environment variable can be defined by one or several user defined upstream DNS IP
 

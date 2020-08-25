@@ -10,12 +10,33 @@ then
 	google)
 	        FORWARDS=8.8.8.8,8.4.4.8
 	        ;;
-	quad9)
+	quad9-secure)
 	        FORWARDS=9.9.9.9
 	        ;;
-	cleanbrowsing)
-	        FORWARDS=185.228.168.168,185.228.168.10
+	quad9-insecure)
+	        FORWARDS=9.9.9.10
 	        ;;
+	adguard)
+	        FORWARDS=176.103.130.130,176.103.130.131
+	        ;;
+	adguard-family)
+	        FORWARDS=176.103.130.132,176.103.130.134
+	        ;;
+	adguard-nonfiltering)
+	        FORWARDS=176.103.130.135,176.103.130.136
+	        ;;
+	cleanbrowsing-security)
+	        FORWARDS=185.228.168.9,185.228.169.9
+	        ;;
+	cleanbrowsing-family)
+	        FORWARDS=185.228.168.168,185.228.169.168
+	        ;;
+	cleanbrowsing-security)
+	        FORWARDS=185.228.168.10,185.228.168.11
+	        ;;
+	comcast)
+	        FORWARDS=96.113.151.145
+	        ;;			
 	*)
 		FORWARDS=$DOT_UPSTREAM
 		;;
