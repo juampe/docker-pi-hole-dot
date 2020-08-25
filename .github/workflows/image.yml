@@ -25,3 +25,4 @@ jobs:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
           DOCKERHUB_REPOSITORY: juampe/pihole-dot
+          README_FILEPATH: ./README.md
