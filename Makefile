@@ -1,3 +1,3 @@
 all:
-	docker build . -t juampe/pihole
+	docker build . -t juampe/pihole-dot
 
