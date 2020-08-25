@@ -1,9 +1,20 @@
+<!-- markdownlint-configure-file { "MD004": { "style": "consistent" } } -->
+<!-- markdownlint-disable MD013 -->
+<!-- markdownlint-disable MD033 -->
+<p align="center">
+    <a href="https://pi-hole.net/">
+        <img src="https://pi-hole.github.io/graphics/Vortex/Vortex_with_Wordmark.svg" width="150" height="260" alt="Pi-hole">
+    </a>
+    <br>
+    <strong>Network-wide ad blocking via your own Linux hardware with DoT</strong>
+</p>
+<!-- markdownlint-enable MD033 -->
 
 # Pi-hole DoT
 
 ## About
 
-🐳 Pi-hole Docker image from [Pi-hole](https://pi-hole.net) with Unbound DNS over TLS for several providers
+🐳 Pi-hole Docker image from [Pi-hole](https://pi-hole.net) with Unbound DNS over TLS (DoT) proxy for several providers
 
 The unbound daemon runs in 0.0.0.0#5353 and Pi Hole can use it as upstream DNS.
 
@@ -23,7 +34,9 @@ Access to the git [repository](https://github.com/juampe/docker-pi-hole-dot.git)
 
 👀`Local Client > (Local Clear DNS) -> Pi-hole > (Host Internal Clear DNS) -> Unbound > (Internet DoT) -> DoT DNS provider`
 
+<!-- markdownlint-disable MD033 -->
 <a href="https://pi-hole.net/2018/06/09/ftldns-and-unbound-combined-for-your-own-all-around-dns-solution/#page-content" target="_blank"><img height="300" src="https://pi-hole.net/wp-content/uploads/2018/05/pihole-ftldns-unbound-600x400.png"></a>
+<!-- markdownlint-enable MD033 -->
 
 ## Pi-Hole configuration
 
@@ -31,7 +44,7 @@ Access to the git [repository](https://github.com/juampe/docker-pi-hole-dot.git)
 
 The enhancement is the the unbound daemon configured to use DNS over TLS (DoT)
 
-## DoT unbound upstream configuration
+## DoT Uzºnbound upstream configuration
 
 👉The unbound DoT upstream can be configured by the **DOT_UPSTREAM** environment variable
 
