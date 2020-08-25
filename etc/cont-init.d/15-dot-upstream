@@ -31,6 +31,6 @@ done
 
 cp /etc/unbound/forward-dot-user.conf /etc/unbound/unbound.conf.d/forward-dot-user.conf
 
-echo "  Running unbound 127.0.0.1#5353 upstream to $FORWARDS"
+echo "  Running Unbound at 127.0.0.1#5353 upstream to $FORWARDS"
 
 unbound
