@@ -18,7 +18,7 @@ The unbound daemon runs in 0.0.0.0#5353 and Pi Hole can use it as upstream DNS.
 
 `Local Client > (Local Clear DNS) -> Pi-hole > (Host Internal Clear DNS) -> Unbound > (Internet DoT) -> DoT DNS provider`
 
-<p align="center"><a href="https://pi-hole.net/2018/06/09/ftldns-and-unbound-combined-for-your-own-all-around-dns-solution/#page-content" target="_blank"><img height="128" src="https://pi-hole.net/wp-content/uploads/2018/05/pihole-ftldns-unbound-600x400.png"></a></p>
+<p align="center"><a href="https://pi-hole.net/2018/06/09/ftldns-and-unbound-combined-for-your-own-all-around-dns-solution/#page-content" target="_blank"><img height="300" src="https://pi-hole.net/wp-content/uploads/2018/05/pihole-ftldns-unbound-600x400.png"></a></p>
 
 ## Pi-Hole configuration
 
