@@ -50,13 +50,13 @@ To use the local unbound daemon DoT DNS upstream server, it can be defined by **
 In this example is used **DOT_UPSTREAM**, **DNS1** and **DNS2** environment variables
 
 ```bash
-docker run --init -d --restart=always --network=eraser --dns 127.0.0.1 --ip 192.168.0.2 -e ServerIP="192.168.0.2" --hostname pihole -e VIRTUAL_HOST="pihole" --name="pihole" -e "WEBPASSWORD=admin" -e "TZ=Europe/Madrid" -e "DOT_UPSTREAM=1.1.1.1,1.0.0.1" -e "DNS1=127.0.0.1#5353" -e "DNS2=no"--cap-add=NET_ADMIN --cap-add=SYS_NICE -v /opt/docker/pihole/dnsmasq.d:/etc/dnsmasq.d/ -v /opt/docker/pihole/pihole:/etc/pihole juampe/pihole-dot
+docker run --init -d --restart=always --network=eraser --dns 127.0.0.1 --ip 192.168.0.2 -e ServerIP="192.168.0.2" --hostname pihole -e VIRTUAL_HOST="pihole" --name="pihole" -e "WEBPASSWORD=admin" -e "TZ=Europe/Madrid" -e "DOT_UPSTREAM=1.1.1.1,1.0.0.1" -e "DNS1=127.0.0.1#5353" -e "DNS2=no" --cap-add=NET_ADMIN --cap-add=SYS_NICE -v /opt/docker/pihole/dnsmasq.d:/etc/dnsmasq.d/ -v /opt/docker/pihole/pihole:/etc/pihole juampe/pihole-dot
 ```
 
 ## HowTo build
 
 ```bash
-git clone <https://github.com/juampe/docker-pi-hole-dot.git>
+git clone https://github.com/juampe/docker-pi-hole-dot.git
 docker buildx build --push --platform linux/arm/v7,linux/arm64/v8,linux/amd64 --tag juampe/pihole-dot:latest .
 ```
 
