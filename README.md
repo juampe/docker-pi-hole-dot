@@ -3,7 +3,7 @@
 
 ## About
 
-🐳 Pi-hole Docker image  from [Pi-hole](https://pi-hole.net) with Unbound DNS over TLS for several providers
+🐳 Pi-hole Docker image from [Pi-hole](https://pi-hole.net) with Unbound DNS over TLS for several providers
 
 The unbound daemon runs in 0.0.0.0#5353 and Pi Hole can use it as upstream DNS.
 
@@ -14,7 +14,7 @@ The unbound daemon runs in 0.0.0.0#5353 and Pi Hole can use it as upstream DNS.
   * linux/arm/v7
   * linux/arm64/v8
 
-## Workflow scheme 
+## Workflow scheme
 
 `Local Client > (Local Clear DNS) -> Pi-hole > (Host Internal Clear DNS) -> Unbound > (Internet DoT) -> DoT DNS provider`
 
