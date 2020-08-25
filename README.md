@@ -30,17 +30,19 @@ The enhancement is the the unbound daemon configured to use DNS over TLS (DoT)
 
 The unbound DoT upstream can be configure by the **DOT_UPSTREAM** environment variable
 
-* cloudflare
-* google
-* cloud9-secure
-* cloud9-insecure
-* adguard
-* adguard-family
-* adguard-nonfiltering
-* cleanbrowsing-security
-* cleanbrowsing-family
-* cleanbrowsing-adult
-* comcast
+* [cloudflare](https://blog.cloudflare.com/announcing-1111/)
+* [google](https://developers.google.com/speed/public-dns/docs/dns-over-tls)
+* [cloud9-secure](https://quad9.net)
+* [cloud9-insecure](https://quad9.net)
+* [adguard](https://adguard.com/en/blog/adguard-dns-announcement.html)
+* [adguard-family](https://adguard.com/en/blog/adguard-dns-announcement.html)
+* [adguard-nonfiltering](https://adguard.com/en/blog/adguard-dns-announcement.html)
+* [cleanbrowsing-security](https://cleanbrowsing.org/dnsovertls)
+* [cleanbrowsing-family](https://cleanbrowsing.org/dnsovertls)
+* [cleanbrowsing-adult](https://cleanbrowsing.org/dnsovertls)
+* [comcast](https://corporate.comcast.com/privacy)
+* [dnssb](https://dns.sb/)
+* [pumplex](https://dns.oszx.co)
 
 Additionally the **DOT_UPSTREAM** environment variable can be defined by one or several user defined upstream DNS IP
 
