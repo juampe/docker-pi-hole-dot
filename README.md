@@ -44,7 +44,7 @@ Access to the git [repository](https://github.com/juampe/docker-pi-hole-dot.git)
 
 The enhancement is the the unbound daemon configured to use DNS over TLS (DoT)
 
-## DoT Uzºnbound upstream configuration
+## DoT Unbound upstream configuration
 
 👉The unbound DoT upstream can be configured by the **DOT_UPSTREAM** environment variable
 
