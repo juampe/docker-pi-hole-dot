@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv bash
+set -e
+rm /etc/dnsmasq.d/sed*
+echo "  Clean dnsmasq.d/sed* temporary files"
+
