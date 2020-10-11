@@ -41,8 +41,8 @@ then
 	        FORWARDS=185.222.222.222,185.184.222.222
 	        ;;
 	pumplex)	
-			FORWARDS=51.38.83.141
-			;;		
+		FORWARDS=51.38.83.141
+		;;		
 	*)
 		FORWARDS=$DOT_UPSTREAM
 		;;
