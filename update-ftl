@@ -1,0 +1,19 @@
+#!/bin/bash
+ARCH=$1
+RELEASE=$2
+URLBASE="https://github.com/pi-hole/FTL/releases/download/$RELEASE"
+echo "Update FTL to $ARCH-$RELEASE"
+case $ARCH in
+	arm)
+		URL="$URLBASE/pihole-FTL-armv7-linux-gnueabihf"
+	;;
+	arm64)
+		URL="$URLBASE/pihole-FTL-armv8-linux-gnueabihf"
+	;;
+	amd64) 
+		URL="$URLBASE/pihole-FTL-linux-x86_64"
+        ;;
+esac
+echo "URL $URL"
+
+wget "$URL" -O /usr/bin/pihole-FTL
