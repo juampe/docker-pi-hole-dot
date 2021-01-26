@@ -1,6 +1,6 @@
 FROM pihole/pihole:master-buster
 ARG TARGETARCH
-ARG FTLVER=v5.3.4
+ARG FTLVER=v5.5.1
 
 RUN apt-get -y update && apt-get -y upgrade && apt-get -y install unbound unbound-anchor unbound-host dns-root-data
 COPY etc/ /etc/
