@@ -8,7 +8,7 @@ case $ARCH in
 		URL="$URLBASE/pihole-FTL-armv7-linux-gnueabihf"
 	;;
 	arm64)
-		URL="$URLBASE/pihole-FTL-armv8-linux-gnueabihf"
+		URL="$URLBASE/pihole-FTL-aarch64-linux-gnu"
 	;;
 	amd64) 
 		URL="$URLBASE/pihole-FTL-linux-x86_64"
@@ -17,3 +17,4 @@ esac
 echo "URL $URL"
 
 wget "$URL" -O /usr/bin/pihole-FTL
+chmod 755 /usr/bin/pihole-FTL
