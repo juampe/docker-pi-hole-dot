@@ -16,5 +16,5 @@ case $ARCH in
 esac
 echo "URL $URL"
 
-wget "$URL" -O /usr/bin/pihole-FTL
+wget "$URL" -q -O /usr/bin/pihole-FTL
 chmod 755 /usr/bin/pihole-FTL
