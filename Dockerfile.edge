@@ -1,9 +1,9 @@
-FROM pihole/pihole:master-buster
+FROM pihole/pihole:master
 ARG TARGETARCH
 ARG DEBIAN_FRONTEND="noninteractive"
 ARG FTLVER=v5.11
 
-RUN apt-get -y update && apt-get -y upgrade && apt-get -y install unbound unbound-anchor unbound-host dns-root-data wget curl jq
+RUN apt-get -y update && apt-get -y upgrade && apt-get -y install unbound unbound-anchor unbound-host dns-root-data jq wget curl
 COPY etc/ /etc/
 
 #USE upstream ugrade method #Define versions en etc/pi-hole-versions 
@@ -12,7 +12,9 @@ COPY etc/ /etc/
 #ENV S6_OVERLAY_VERSION v2.1.0.2
 #RUN bash -ex install.sh 2>&1 && rm -rf /var/cache/apt/archives /var/lib/apt/lists/*
 
-COPY update-ftl /usr/sbin/
+COPY update-* /usr/sbin/
+RUN /usr/sbin/update-core
+RUN /usr/sbin/update-web
 RUN /usr/sbin/update-ftl $TARGETARCH
 
 RUN chown -R root:unbound /etc/unbound && chmod 640 /etc/unbound/unbound.conf.d/* /etc/unbound/zones/*

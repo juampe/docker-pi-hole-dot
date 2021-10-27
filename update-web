@@ -1,0 +1,5 @@
+#!/bin/bash
+source /etc/pi-hole-versions
+cd /var/www/html/admin
+git pull
+git checkout -f $WEB_VERSION

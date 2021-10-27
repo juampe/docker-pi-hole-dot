@@ -1,0 +1,5 @@
+#!/bin/bash
+source /etc/pi-hole-versions
+cd /etc/.pihole/
+git pull
+git checkout -f $CORE_VERSION
