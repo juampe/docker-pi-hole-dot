@@ -34,3 +34,7 @@ jobs:
         name: Build the nightly image
         run: |
             docker buildx build --push --tag juampe/pihole-dot:nightly --platform linux/arm/v7,linux/arm64/v8,linux/amd64 -f Dockerfile.nightly .
+      -
+        name: Build the edge image
+        run: |
+            docker buildx build --push --tag juampe/pihole-dot:edge --platform linux/arm/v7,linux/arm64/v8,linux/amd64 -f Dockerfile.edge .
