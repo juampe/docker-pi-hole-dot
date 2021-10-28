@@ -1,4 +1,4 @@
-FROM pihole/pihole:master-buster
+FROM pihole/pihole:latest
 ARG TARGETARCH
 ARG DEBIAN_FRONTEND="noninteractive"
 ARG FTLVER=v5.11
