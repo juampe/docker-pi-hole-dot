@@ -1,0 +1,40 @@
+name: Manually triggered workflow
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - 
+        name: Checkout code
+        uses: actions/checkout@v2
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+        with:
+          platforms: linux/arm/v7,linux/arm64/v8,linux/amd64
+      -
+        name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          version: latest
+      -
+        name: Available platforms
+        run: echo ${{ steps.buildx.outputs.platforms }}
+      - 
+        name: Login to docker hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+      - 
+        name: Build the master image
+        run: |
+            docker buildx build --push --tag juampe/pihole-dot:latest --platform linux/arm/v7,linux/arm64/v8,linux/amd64 -f Dockerfile .
+      - 
+        name: Build the nightly image
+        run: |
+            docker buildx build --push --tag juampe/pihole-dot:nightly --platform linux/arm/v7,linux/arm64/v8,linux/amd64 -f Dockerfile.nightly .
+      -
+        name: Build the edge image
+        run: |
+            docker buildx build --push --tag juampe/pihole-dot:edge --platform linux/arm/v7,linux/arm64/v8,linux/amd64 -f Dockerfile.edge .
