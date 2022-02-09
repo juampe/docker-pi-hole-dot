@@ -77,7 +77,7 @@ The enhancement is the the unbound daemon configured to use DNS over TLS (DoT)
 💪In this example is used **DOT_UPSTREAM**, **DNS1** and **DNS2** environment variables
 
 ```bash
-docker run --init -d --restart=always --network=eraser --dns 127.0.0.1 --ip 192.168.0.2 -e ServerIP="192.168.0.2" --hostname pihole -e VIRTUAL_HOST="pihole" --name="pihole" -e "WEBPASSWORD=admin" -e "TZ=Europe/Madrid" -e "DOT_UPSTREAM=1.1.1.1,1.0.0.1" -e "DNS1=127.0.0.1#5353" -e "DNS2=no" --cap-add=NET_ADMIN --cap-add=SYS_NICE -v /opt/docker/pihole/dnsmasq.d:/etc/dnsmasq.d/ -v /opt/docker/pihole/pihole:/etc/pihole juampe/pihole-dot
+docker run --init -d --restart=always --network=eraser --dns 127.0.0.1 --ip 192.168.0.2 -e ServerIP="192.168.0.2" --hostname pihole -e VIRTUAL_HOST="pihole" --name="pihole" -e "WEBPASSWORD=admin" -e "TZ=Europe/Madrid" -e "DOT_UPSTREAM=1.1.1.1,1.0.0.1" -e "DNS1=127.0.0.1#5353" -e "DNS2=no" -e "BLOCKING_ENABLED=yes" --cap-add=NET_ADMIN --cap-add=SYS_NICE -v /opt/docker/pihole/dnsmasq.d:/etc/dnsmasq.d/ -v /opt/docker/pihole/pihole:/etc/pihole juampe/pihole-dot
 ```
 
 ## How to build 👷
