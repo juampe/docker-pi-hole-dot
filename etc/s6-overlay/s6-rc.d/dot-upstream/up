@@ -1,0 +1,3 @@
+#!/command/execlineb -P
+foreground { echo "Calling /etc/rc-user/dot-upstream..." }
+/bin/bash /etc/rc-user/dot-upstream

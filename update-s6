@@ -1,0 +1,20 @@
+#!/bin/bash
+VERSION="v3.1.2.1"
+echo "ENV $TARGETARCH"
+case $TARGETARCH in
+arm)
+    ARCH=arm
+    ;;
+arm64)
+    ARCH=aarch64
+    ;;
+amd64)
+    ARCH=x86_64
+    ;;
+esac
+URL1="https://github.com/just-containers/s6-overlay/releases/download/$VERSION/s6-overlay-noarch.tar.xz"
+URL2="https://github.com/just-containers/s6-overlay/releases/download/$VERSION/s6-overlay-$ARCH.tar.xz"
+echo "URL $URL"
+rm -Rf /package
+curl -L -o /tmp/s6-overlayn.tar.xz "$URL1" && tar -Jxpf /tmp/s6-overlayn.tar.xz -C / && rm -f /tmp/*.tar.xz
+curl -L -o /tmp/s6-overlay.tar.xz "$URL2" && tar -Jxpf /tmp/s6-overlay.tar.xz -C / && rm -f /tmp/*.tar.xz
